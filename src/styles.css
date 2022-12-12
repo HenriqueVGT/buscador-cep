@@ -1,4 +1,4 @@
-.conteudo {
+.container {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
     background: linear-gradient(#000, #097969);
 }
 
-.titulo {
+.title {
     font-size: 85px;
     color: #fff;
     animation: flipTitle 2s;
@@ -21,7 +21,7 @@
     }
 }
 
-.barraPesquisa {
+.searchBar {
     background-color:slategray;
     padding: 15px;
     margin: 34px 0;
@@ -30,7 +30,7 @@
     box-shadow: 1px 3px 8px #000;
 }
 
-.barraPesquisa input {
+.searchBar input {
     background-color: transparent;
     border: 0;
     font-size: 20px;
@@ -39,11 +39,11 @@
     margin-right: 8px;
 }
 
-.barraPesquisa input::placeholder {
+.searchBar input::placeholder {
     color: #f1f1f1;
 }
 
-.botaoBusca {
+.searchButton {
     background-color: transparent;
     border: 0;
     display: flex;
@@ -53,11 +53,11 @@
     transition: transform 0.5s;
 }
 
-.botaoBusca:hover {
+.searchButton:hover {
     transform: scale(1.2);
 }
 
-.resultado {
+.searchResult {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,27 +67,27 @@
     border-radius: 8px;
 }
 
-.resultado h2 {
+.searchResult h2 {
     margin: 16px 0;
     font-size: 39px;
 }
 
-.resultado span {
+.searchResult span {
     margin-bottom: 16px;
     font-weight: bold;
 }
 
 @media (max-width: 620px) {
-    .titulo { 
+    .title { 
         font-size: 60px;
     }
 
-    .resultado {
+    .searchResult {
         width: 80%;
         min-height: 250px;
     }
 
-    .resultado h2 {
+    .searchResult h2 {
         font-size: 28px;
     }
 }

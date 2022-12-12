@@ -33,20 +33,25 @@ export function App() {
   return (
     <div className='container'>
       <h1 className='title'>Consulte o seu CEP</h1>
-      <div className='barraPesquisa'>
+      <div className='searchBar'>
         <input 
           type='text' 
           placeholder='Digite o seu CEP...' 
           value={cepData} 
           onChange={(e) => setCepData(e.target.value)} 
         />
-        <button className="botaoBusca" onClick={handleSearch}>
+        <button className="searchButton" onClick={handleSearch}>
           <FiSearch size={25} color="#FFF" />
         </button>
       </div>
 
-      {Object.keys(cepData).length > 0 && (
-        <main className="resultado">
+      {cep.erro ? (
+        <main className="searchResult">
+          <h2> CEP não encontrado! </h2>
+          <span> Tente novamente... </span>
+        </main>
+      ) : (
+        <main className="searchResult">
           <h2> CEP: {cepData.cep}</h2>
           <span>{cepData.logradouro}</span>
           <span>Complemento: {cepData.complemento}</span>
